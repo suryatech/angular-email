@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='en' ng-app="myFirstApp">
 	<head>
 		<title>Simple App</title>
 		<meta charset = 'UTF-8'>
-		
 		<link href="http://netdna.bootstrapcdn.com/bootswatch/3.0.3/yeti/bootstrap.min.css" rel="stylesheet">
 		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
-		
-		
 	</head>
 	<body>
+
+		<div ng-view></div>
+
 	</body>
 	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </html>
