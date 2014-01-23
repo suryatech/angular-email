@@ -1,1 +1,29 @@
-<h1>Home</h1>
+<div class="row">
+	<div class="col-xs-2" ng-controller="mailListingController"><h2>Sidebar</h2>
+	<ul id='emailListing'>
+		<li ng-repeat="mail in email" ng-click="setSelectedMail(mail)">
+			<div class='row' ng-class = "{selected: isSelected(mail)}"> 
+				<div class='col-xs-8'>{{mail.from}}</div>
+				<div class='col-xs-12'>{{mail.subject}}</div>
+			</div>
+		</li>
+		
+	</ul>
+
+	</div>
+	<div class="col-xs-8" ng-controller="contentController">
+		<h2>Content</h2>
+		<div ng-show = '!selectedMail'>
+			<h1>No conversation selected</h1>
+		</div>
+		<div ng-show="selectedMail">
+			<div>{{selectedMail.subject}}</div>
+			<div class='row'>
+				<div class='col-xs-6'>{{selectedMail.from}} to {{selectedMail.to}}</div>
+				<a ng-click='showReply()' class='btn btn-warning'>Reply</a>
+			</div>
+			<div class="col-xs-8">{{selectedMail.body}}</div>
+		</div>
+	</div>
+</div>
+

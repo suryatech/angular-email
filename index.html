@@ -3,15 +3,35 @@
 	<head>
 		<title>Simple App</title>
 		<meta charset = 'UTF-8'>
-		<link href="http://netdna.bootstrapcdn.com/bootswatch/3.0.3/yeti/bootstrap.min.css" rel="stylesheet">
-		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/fontawesome.min.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
 	</head>
 	<body>
+		<nav class="navbar navbar-default" role="navigation">
+		  
+		  <div class="navbar-header">
+		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		      <span class="sr-only">Toggle navigation</span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		    </button>
+		    <a class="navbar-brand" href="#">Angular Mail Client</a>
+		  </div>
+
+		  
+		    <ul class="nav navbar-nav navbar-right">
+		      <li><a href="#/">Home</a></li>
+		      <li><a href="#/settings" class='active'>Settings</a></li>
+		      
+		    </ul>
+		  </div><!-- /.navbar-collapse -->
+		</nav>
 
 		<div ng-view></div>
-
 	</body>
 	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </html>

@@ -1,0 +1,45 @@
+<h1>Update Your Settings</h1>
+<form class="form-horizontal row" role="form" name='mainForm' ng-submit="updateSettings()">
+	<div class="form-group col-md-8">
+		<label class="col-sm-2 control-label">Name</label>
+		<div class="col-sm-10">
+			<input name ='personName' type="text" class="form-control" placeholder="Name"  ng-model='settings.name' ng-minlength=3 ng-maxlength = 20 ng-pattern='/^[a-zA-z]+$/' required/>
+			<div ng-show="mainForm.personName.$invalid && mainForm.personName.$dirty">
+				<span ng-show='mainForm.personName.$error.required'>Your name is required.</span>
+				<span ng-show='mainForm.personName.$error.minlength'>Your name must be greater than 3 characters.</span>
+				<span ng-show='mainForm.personName.$error.maxlength'>Your name must be less than 20 characters</span>
+				<span ng-show='mainForm.personName.$error.pattern'>Your name is invalid</span>
+			</div>
+		</div>
+	</div>
+	<div ng-show="">test</div>
+	<div class="form-group col-md-8">
+		<label class="col-sm-2 control-label">Email</label>
+		<div class="col-sm-10">
+			<input type="email" class="form-control" name = 'email'placeholder="Email"  ng-model='settings.email' required/>
+			<div ng-show="mainForm.email.$invalid && mainForm.email.$dirty">
+				<span ng-show='mainForm.email.$error.required '>Your email is required</span>
+				<span ng-show='mainForm.email.$error.email'>Your email is not valid</span>
+			</div>
+		</div>
+	</div>
+	<div class="form-group col-md-8">
+		<label class="col-sm-2 control-label">Age</label>
+		<div class="col-sm-10">
+			<input type="number" class="form-control" placeholder="Age"  ng-model='settings.age' name='age' required min=18 max=100/>
+			<div ng-show="mainForm.age.$invalid && mainForm.age.$dirty">
+				<span ng-show='mainForm.age.$error.required '>Your age is required</span>
+				<span ng-show='mainForm.age.$error.min'>Minimum age has to be 18</span> 
+				<span ng-show='mainForm.age.$error.max'>Maximum age can be up to be 100</span> 
+			</div>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button ng-disabled='mainForm.$dirty && mainForm.$invalid' type="submit" class="btn btn-warning">Update</button>
+		</div>
+	</div>
+</form>
+<!-- <h1>Settings</h1>
+<input name='name' ng-model='name' /> -->

@@ -1,0 +1,20 @@
+/*.ng-pristine {
+	border: 1px solid green;
+}*/
+
+/*.ng-dirty{
+	border: 1px solid yellow;
+}*/
+
+input.ng-invalid.ng-dirty { 
+	border: 1px solid red;
+}
+
+input.ng-valid.ng-dirty {
+	border: 1px solid green;
+}
+
+#emailListing li{
+	display: block;
+	margin-bottom: 1em;
+}
